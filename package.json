@@ -3,6 +3,10 @@
   "displayName": "Close files in folder",
   "description": "Closes files in a folder",
   "version": "0.0.1",
+  "publisher": "inway-fh",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FH-Inway/vscode-close-files-in-folder"},
   "engines": {
     "vscode": "^1.89.0"
   },
