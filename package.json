@@ -12,10 +12,17 @@
   "activationEvents": [],
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "close-files-in-folder.closeFilesInFolder",
-      "title": "Close files in folder"
-    }]
+      "commands": [{
+        "command": "close-files-in-folder.closeFilesInFolder",
+        "title": "Close files in folder"
+      }],
+      "menus": {
+        "explorer/context": [{
+          "when": "resourceScheme == file && resourceExtname == ''",
+          "command": "close-files-in-folder.closeFilesInFolder",
+          "group": "navigation"
+        }]
+      }
   },
   "scripts": {
     "lint": "eslint .",
