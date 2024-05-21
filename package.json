@@ -14,10 +14,17 @@
   "contributes": {
     "commands": [
       {
-        "command": "close-files-in-folder.helloWorld",
-        "title": "Hello World"
+        "command": "close-files-in-folder.closeFilesInFolder",
+        "title": "Close files in folder"
       }
-    ]
+    ],
+    "menus": {
+      "explorer/context": [{
+        "when": "resourceScheme == file && resourceExtname == ''",
+        "command": "close-files-in-folder.closeFilesInFolder",
+        "group": "navigation"
+      }]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
